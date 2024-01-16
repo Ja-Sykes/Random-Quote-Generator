@@ -1,0 +1,49 @@
+body {
+    padding-top: 20%;
+
+}
+
+.page{
+    height: 100vh;
+    width: 100%;
+
+    text-align: center;
+    color: aliceblue;
+
+    background: linear-gradient(to bottom right, #1a5276, #76448a, #c0392b);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.quote {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.quoteForm{
+    padding-top: 1.25%;
+}
+
+.header{
+    font-family: 'Damion', cursive;
+    font-size: 10rem;
+    padding-top: 5%;
+}
+
+
+.btn {
+    width: 15rem;
+    height: 5rem;
+
+    border: 4px solid #007BFF !important;
+    border-radius: 2.25rem !important;
+    color: #007BFF;
+    background-color: lightpink;
+}

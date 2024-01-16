@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My App</title>
+  
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+
+  <!-- CSS & BOOTSTRAP -->
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="page">
+
+        <h1 class="header">Life Lessons</h1>
+        
+        <form action="/" method="POST" class="buttons quoteForm">
+            <div class="dropdown">
+                <label for="dropdown" style="display: block;">Select a Genere:</label>
+                <select id="genre" name="genre" class="dropdown-btn btn">
+                    <option value="age">Age</option>
+                    <option value="alone">Alone</option>
+                    <option value="amazing">Amazing</option>
+                    <option value="anger">Anger</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="architecture">Architecture</option>
+                    <option value="art">Art</option>
+                    <option value="attitude">Attitude</option>
+                    <option value="beauty">Beauty</option>
+                    <option value="best">Best</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="business">Business</option>
+                    <option value="car">Car</option>
+                    <option value="change">Change</option>
+                    <option value="communication">Communication</option>
+                    <option value="computers">Computers</option>
+                    <option value="cool">Cool</option>
+                    <option value="courage">Courage</option>
+                    <option value="dad">Dad</option>
+                    <option value="dating">Dating</option>
+                    <option value="death">Death</option>
+                    <option value="design">Design</option>
+                    <option value="diet">Diet</option>
+                    <option value="dreams">Dreams</option>
+                    <option value="education">Education</option>
+                    <option value="environmental">Environmental</option>
+                    <option value="equality">Equality</option>
+                    <option value="experience">Experience</option>
+                    <option value="failure">Failure</option>
+                    <option value="faith">Faith</option>
+                    <option value="family">Family</option>
+                    <option value="famous">Famous</option>
+                    <option value="fear">Fear</option>
+                    <option value="finance">Finance</option>
+                    <option value="fitness">Fitness</option>
+                    <option value="food">Food</option>
+                    <option value="forgiveness">Forgiveness</option>
+                    <option value="freedom">Freedom</option>
+                    <option value="friendship">Friendship</option>
+                    <option value="funny">Funny</option>
+                    <option value="future">Future</option>
+                    <option value="gardening">Gardening</option>
+                    <option value="god">God</option>
+                    <option value="good">Good</option>
+                    <option value="government">Government</option>
+                    <option value="graduation">Graduation</option>
+                    <option value="great">Great</option>
+                    <option value="happiness">Happiness</option>
+                    <option value="health">Health</option>
+                    <option value="history">History</option>
+                    <option value="home">Home</option>
+                    <option value="hope">Hope</option>
+                    <option value="humor">Humor</option>
+                    <option value="imagination">Imagination</option>
+                    <option value="inspirational">Inspirational</option>
+                    <option value="intelligence">Intelligence</option>
+                    <option value="jealousy">Jealousy</option>
+                    <option value="knowledge">Knowledge</option>
+                    <option value="leadership">Leadership</option>
+                    <option value="learning">Learning</option>
+                    <option value="legal">Legal</option>
+                    <option value="life">Life</option>
+                    <option value="love">Love</option>
+                    <option value="marriage">Marriage</option>
+                    <option value="medical">Medical</option>
+                    <option value="men">Men</option>
+                    <option value="mom">Mom</option>
+                    <option value="money">Money</option>
+                    <option value="morning">Morning</option>
+                    <option value="motivational">Motivational</option>
+                    <option value="movies">Movies</option>
+                    <option value="movingon">Moving On</option>
+                    <option value="music">Music</option>
+                    <option value="nature">Nature</option>
+                    <option value="parenting">Parenting</option>
+                    <option value="patience">Patience</option>
+                    <option value="patriotism">Patriotism</option>
+                    <option value="peace">Peace</option>
+                    <option value="pet">Pet</option>
+                    <option value="poetry">Poetry</option>
+                    <option value="politics">Politics</option>
+                    <option value="positive">Positive</option>
+                    <option value="power">Power</option>
+                    <option value="relationship">Relationship</option>
+                    <option value="religion">Religion</option>
+                    <option value="respect">Respect</option>
+                    <option value="romantic">Romantic</option>
+                    <option value="sad">Sad</option>
+                    <option value="science">Science</option>
+                    <option value="smile">Smile</option>
+                    <option value="society">Society</option>
+                    <option value="sports">Sports</option>
+                    <option value="strength">Strength</option>
+                    <option value="success">Success</option>
+                    <option value="sympathy">Sympathy</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="technology">Technology</option>
+                    <option value="teen">Teen</option>
+                    <option value="thankful">Thankful</option>
+                    <option value="time">Time</option>
+                    <option value="travel">Travel</option>
+                    <option value="trust">Trust</option>
+                    <option value="truth">Truth</option>
+                    <option value="war">War</option>
+                    <option value="wedding">Wedding</option>
+                </select>
+                <button type="submit" value="generate" name="choice" class="btn btn">Generate a Quote!</button>
+            </div>
+        </form>
+
+        <script>
+            var selectedGenre = document.getElementById('genre').value;
+            console.log('Selected genre: ' + selectedGenre);
+        </script>
+
+        <div class="quote">
+            <% if (data) { %>
+                <h3 id="quoteText"><%= data.quoteText %></h3>
+                <p id="quoteAuthor">- <%= data.quoteAuthor %></p>
+                <p id="quoteGenre">Genre: <%= data.quoteGenre %></p>
+            <% } else if (error) { %>
+                <p><%= error %></p>
+            <% } else { %>
+                <p>No quote available.</p>
+            <% } %>
+        </div>
+    </div>
+
+
+  
+
+</body>
+
+</html>
